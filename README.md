@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int choice;
+    float a, b, result;
+
+    printf("ENGINEERING PHYSICS CALCULATOR\n");
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("3. Multiplication\n");
+    printf("4. Division\n");
+    printf("5. Sin\n");
+    printf("6. Cos\n");
+    printf("7. Tan\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("Enter two numbers: ");
+            scanf("%f %f", &a, &b);
+            result = a + b;
+            printf("Result = %.2f", result);
+            break;
+
+        case 2:
+            printf("Enter two numbers: ");
+            scanf("%f %f", &a, &b);
+            result = a - b;
+            printf("Result = %.2f", result);
+            break;
+
+        case 3:
+            printf("Enter two numbers: ");
+            scanf("%f %f", &a, &b);
+            result = a * b;
+            printf("Result = %.2f", result);
+            break;
+
+        case 4:
+            printf("Enter two numbers: ");
+            scanf("%f %f", &a, &b);
+            if(b != 0)
+                printf("Result = %.2f", a / b);
+            else
+                printf("Division by zero error");
+            break;
+
+        case 5:
+            printf("Enter angle in degrees: ");
+            scanf("%f", &a);
+            printf("Sin = %.2f", sin(a * 3.14159 / 180));
+            break;
+
+        case 6:
+            printf("Enter angle in degrees: ");
+            scanf("%f", &a);
+            printf("Cos = %.2f", cos(a * 3.14159 / 180));
+            break;
+
+        case 7:
+            printf("Enter angle in degrees: ");
+            scanf("%f", &a);
+            printf("Tan = %.2f", tan(a * 3.14159 / 180));
+            break;
+
+        default:
+            printf("Invalid choice");
+    }
+
+    return 0;
+}
